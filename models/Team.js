@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const { sportsType } = require('../utils/enum')
+const { sport } = require('../utils/enum')
 
 const TeamSchema = new mongoose.Schema({
   name: {
@@ -10,13 +10,13 @@ const TeamSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  sportsType: {
+  sport: {
     type: String,
     enum: [
-      sportsType.HURLING, 
-      sportsType.GAELIC_FOOTBALL, 
-      sportsType.CAMOGIE,
-      sportsType.LADIES_GAELIC_FOOTBALL
+      sport.HURLING, 
+      sport.GAELIC_FOOTBALL, 
+      sport.CAMOGIE,
+      sport.LADIES_GAELIC_FOOTBALL
     ],
     required: true
   },
