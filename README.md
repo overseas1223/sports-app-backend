@@ -1,6 +1,6 @@
 ## API
 
-<h3>1. TEAM</h3>
+<h3>1. Team</h3>
 
 Create Team
 ```bash
@@ -13,7 +13,7 @@ Request BODY:
 }
 ```
 
-<h3>2. TEAM</h3>
+<h3>2. Referee</h3>
 
 Create Referee
 ```bash
