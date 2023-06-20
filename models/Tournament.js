@@ -1,9 +1,9 @@
 const mongoose = require("mongoose")
 
 const TournamentSchema = new mongoose.Schema({
-  rounds: [{
-    _id: false,
-    matches: [{
+  rounds: [
+    [{
+      _id: false,
       team1: {
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'Team'
@@ -17,7 +17,7 @@ const TournamentSchema = new mongoose.Schema({
         ref: 'Match'
       }
     }]
-  }],
+  ],
   createdAt: {
     type: Date,
     default: new Date(),

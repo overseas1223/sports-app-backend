@@ -25,7 +25,7 @@ const MatchSchema = new mongoose.Schema({
   neutralVenue: {
     type: Boolean
   },
-  refree: {
+  referee: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'Referee',
     required: true
