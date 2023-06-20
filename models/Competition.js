@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const { sport, stage } = require('../utils/enum')
+const { sport } = require('../utils/enum')
 
 const CompetitionSchema = new mongoose.Schema({
   name: {
@@ -16,21 +16,25 @@ const CompetitionSchema = new mongoose.Schema({
     ],
     required: true
   },
-  stage: {
-    type: String,
-    enum: [
-      stage.GROUP,
-      stage.GROUP_KNOCKOUT,
-      stage.KNOCKOUT
-    ],
-    required: true
-  },
-  groupCount: {
-    type: Number
-  },
   teamCount: {
     type: Number,
     required: true
+  },
+  knockout: {
+
+  },
+  group: {
+    count: {
+      type: Number
+    },
+    teamCount: {
+      type: Number
+    }
+  },
+  tournament: {
+    teamCount: {
+      type: Number
+    }
   },
   createdAt: {
     type: Date,

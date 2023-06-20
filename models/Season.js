@@ -10,25 +10,19 @@ const SeasonSchema = new mongoose.Schema({
     ref: 'Competition',
     required: true
   },
-  standings: [{
-    team: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: 'Team',
-      required: true
-    },
-    win: {
-      type: Number,
-      default: 0
-    },
-    draw: {
-      type: Number,
-      default: 0
-    },
-    loss: {
-      type: Number,
-      default: 0
-    },
+  teams: [{
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Team',
+    required: true
   }],
+  groups: [{
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Group'
+  }],
+  tournament: {
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Tournament'
+  },
   createdAt: {
     type: Date,
     default: new Date(),

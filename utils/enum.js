@@ -5,10 +5,4 @@ const sport = {
   LADIES_GAELIC_FOOTBALL: `Ladies' Gaelic Football`
 }
 
-const stage = {
-  GROUP: 'Group',
-  KNOCKOUT: 'Knockout',
-  GROUP_KNOCKOUT: 'Group_Knockout'
-}
-
-module.exports = { sport, stage }
+module.exports = { sport }
